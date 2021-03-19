@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bayern Students Survey Form</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Tahoma ,sans-serif;
+            background-image: linear-gradient(
+                    115deg,
+                    rgba(58, 58, 158, 0.8),
+                    rgba(136, 136, 206, 0.7)
+            ),
+            url(https://bebs.org/wp-content/uploads/2019/05/form-background-1024x683.jpg);
+            color: white;
+        }
+        #title {
+            font-style: italic;
+        }
+        #description {
+            padding-bottom: 20px;
+        }
+        #main-container {
+            background: rgba(27, 27, 50, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 400px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        form {
+            margin: 0 30px 0 30px;
+        }
+        label, .description {
+            display: flex;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            align-items: center;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-size: 18px;
+        }
+        div.form-group {
+            padding-bottom: 10px;
+        }
+        #first-elem-form-group {
+            padding-top: 20px;
+        }
+        #last-elem-form-bottom {
+            padding-bottom: 20px;
+        }
+        .input-radio, .input-checkbox {
+            display: inline-block;
+            margin-right: 0.625rem;
+            max-width: 1.25rem;
+        }
+        #input-radio {
+            text-align: left;
+        }
+        textarea {
+            min-height: 100px;
+            min-width: 100%;
+            font-size: 18px;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: #37af65;
+            color: inherit;
+            border-radius: 2px;
+        }
+    </style>
+
+</head>
+<body>
+<h1 id=title>Student Survey Form</h1>
+<p id="description">A short survey to get to know students in Bayern and their suggestions for their universities</p>
+<div class="container" id="main-container">
+    <form id="survey-form">
+        <div class="form-group" id="first-elem-form-group">
+            <label for="name-label">Name</label>
+            <input type="text" id="name-label" name="name" placeholder="Your name ...">
+        </div>
+        <div class="form-group">
+            <label for="email-label">Email</label>
+            <input type="email" id="email-label" name="email" placeholder="Your Email here...">
+        </div>
+        <div class="form-group>">
+            <label for="age-label">Age</label>
+            <input type="number" id="age-label" name="age" min="16" max="50" placeholder="Your Age here...">
+        </div>
+        <div class="form-group" id="input-radio">
+            <p class="description">Which diploma are you doing?</p>
+            <label>
+                <input name="diploma" value="bachelor" type="radio" class="input-radio" checked="">Bachelor</label>
+            <label>
+                <input name="diploma" value="masters" type="radio" class="input-radio">Masters</label>
+            <label>
+                <input name="diploma" value="phd" type="radio" class="input-radio">PHD</label>
+        </div>
+        <div class="form-group">
+            <p class="description">What is your specialty?</p>
+            <label for="dropdown"></label>
+            <select id="dropdown" name="dropdown" required="">
+                <option disabled="" selected="" value="">Select an option</option>
+                <option value="Computer-Science">Computer Science</option>
+                <option value="Math">Math</option>
+                <option value="Physics">Physics</option>
+                <option value="Literature">Literature</option>
+                <option value="Mechanics">Mechanics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Philosophy">Philosophy</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p class="description">
+                What would you like to see improved in your university?
+                <span class="clue">(Check all that apply)</span>
+            </p>
+            <label>
+                <input name="prefer" value="time-schedule" type="checkbox" class="input-checkbox">Time Schedule</label>
+            <label>
+                <input name="prefer" value="course-contents" type="checkbox" class="input-checkbox">Course Contents</label>
+            <label>
+                <input name="prefer" value="available-courses" type="checkbox" class="input-checkbox">Available Courses</label>
+        </div>
+        <div class="form-group">
+            <p class="description">Any comments or suggestions?</p>
+            <label for="comments"></label>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
