@@ -1,1 +1,1 @@
-a simple survey for students
+a simple survey page for students with HTML and CSS
